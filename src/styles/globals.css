@@ -1,6 +1,17 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  @apply bg-stone-50 text-stone-900 antialiased;
+}
+
+@utility btn-primary {
+  @apply rounded bg-stone-900 px-3 py-2 text-sm text-white hover:bg-stone-700 disabled:opacity-40;
+}
+
+@utility btn-secondary {
+  @apply rounded border border-stone-300 bg-white px-3 py-2 text-sm hover:bg-stone-100 disabled:opacity-40;
 }

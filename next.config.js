@@ -5,6 +5,9 @@
 import "./src/env.js";
 
 /** @type {import("next").NextConfig} */
-const config = {};
+const config = {
+  // A lockfile in a parent directory otherwise makes Next pick the wrong workspace root.
+  turbopack: { root: import.meta.dirname },
+};
 
 export default config;

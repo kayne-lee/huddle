@@ -12,7 +12,11 @@
     "dev": "next dev --turbo",
     "preview": "next build && next start",
     "start": "next start",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "lint": "biome check .",
+    "format": "biome check --write .",
+    "test": "vitest run",
+    "check": "biome check . && tsc --noEmit && vitest run && ./scripts/slop-check.sh"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.135.0",
